@@ -1,0 +1,104 @@
+---
+title: Introduction to Александр Васильевич
+description: Discover Александр Васильевич, a versatile documentation platform designed for organizing and managing project documentation efficiently.
+---
+
+## Overview
+
+Александр Васильевич provides a centralized space for you to create, organize, and manage all your project documentation. You can build structured docs sites with MDX support, version history, and seamless collaboration features. Focus on content while the platform handles hosting, search, and navigation automatically.
+
+<Callout kind="info">
+  This documentation space serves as your default hub. Customize it to fit your project's needs.
+</Callout>
+
+## Key Features
+
+Explore the core capabilities that make Александр Васильевич your go-to documentation solution.
+
+<Columns cols={3}>
+  <Card title="MDX-Powered Pages" icon="book-open" href="/docs/mdx-guide">
+    Write rich documentation using MDX components like `<Callout>`, `<Steps>`, and `<Tabs>`. Embed code, diagrams, and interactive elements effortlessly.
+  </Card>
+  <Card title="Version Control" icon="git-branch" href="/docs/versioning">
+    Track changes with built-in Git integration. Roll back to previous versions and collaborate without conflicts.
+  </Card>
+  <Card title="Search & Navigation" icon="search" href="/docs/search">
+    Full-text search across all pages. Auto-generated sidebar and quick links keep you oriented.
+  </Card>
+</Columns>
+
+## Who Should Use Александр Васильевич
+
+<Tabs>
+  <Tab title="Developers" icon="code">
+    Use it to document APIs, SDKs, and libraries. Include `<Request>` and `<Response>` components for live examples.
+  </Tab>
+  <Tab title="Product Teams" icon="users">
+    Centralize user guides, onboarding flows, and FAQs with `<Steps>` and `<Expandable>` for progressive disclosure.
+  </Tab>
+  <Tab title="Open Source Maintainers" icon="github">
+    Host public docs with changelog `<Update>` components and contributor guides.
+  </Tab>
+</Tabs>
+
+## Quick Start
+
+Get up and running in minutes.
+
+<Steps>
+  <Step title="Create Your Space" icon="plus">
+    Sign up at `https://dashboard.example.com` and initialize your documentation space.
+  </Step>
+  <Step title="Add Your First Page" icon="file-plus">
+    Create `introduction.mdx` with the frontmatter structure.
+  </Step>
+  <Step title="Customize Components" icon="settings">
+    Use components like `<Columns>` and `<Cards>` for layout.
+
+````mdx
+<Columns cols={2}>
+  <Card title="Feature A" icon="zap" />
+  <Card title="Feature B" icon="shield" />
+</Columns>
+````
+
+  </Step>
+  <Step title="Publish" icon="rocket">
+    Deploy changes with one click. Access at `https://docs.example.com`.
+  </Step>
+</Steps>
+
+## Brand Guidelines
+
+Incorporate the brand color `#3B82F6` for consistency. Use it for accents, links, and primary buttons.
+
+<CodeGroup tabs="CSS, Tailwind">
+````css
+:root {
+  --brand-blue: #3B82F6;
+}
+
+.primary-button {
+  background-color: var(--brand-blue);
+}
+````
+````html
+<div class="bg-blue-500 text-white p-4 rounded">
+  Primary Button
+</div>
+````
+</CodeGroup>
+
+## Next Steps
+
+<Card title="Quickstart Guide" icon="zap" href="/quickstart">
+  Dive into installation and your first project.
+</Card>
+
+<Card title="Authentication" icon="lock" href="/authentication">
+  Secure your docs with API keys and tokens.
+</Card>
+
+<Card title="Changelog" icon="git-commit" href="/changelog">
+  Stay updated with the latest releases.
+</Card>

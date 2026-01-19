@@ -1,0 +1,125 @@
+---
+title: Changelog
+description: Track the evolution of Александр Васильевич with details on recent releases and updates.
+---
+
+## Recent Releases
+
+Stay updated with the latest improvements to Александр Васильевич. You receive automatic notifications for major releases, but check here for full details on changes.
+
+<Update label="2024-10-15" description="v1.2.0" tags={["feature", "improvement"]}>
+
+## New Features
+
+- Added real-time collaboration for shared documentation editing
+- Introduced customizable brand colors, starting with `#3B82F6` as the default blue
+- New webhook support for integrating with external services like Slack
+
+## Improvements
+
+- Enhanced search performance by `>50%` for large documentation sites
+- Better mobile responsiveness for all documentation pages
+
+## Bug Fixes
+
+- Fixed parsing errors in nested code blocks
+- Resolved issues with Cyrillic character rendering in titles
+
+</Update>
+
+<Update label="2024-09-20" description="v1.1.0" tags={["feature", "bugfix"]}>
+
+## New Features
+
+- Support for Mermaid diagrams in MDX without JSX components
+- Integrated Lucide icons with auto-completion in the editor
+
+## Bug Fixes
+
+- Corrected frontmatter YAML parsing for descriptions with special characters
+- Fixed H1 heading suppression in documentation generation
+
+</Update>
+
+<Update label="2024-08-10" description="v1.0.0" tags={["breaking", "feature"]}>
+
+## Initial Release
+
+- Core MDX documentation generation with 15+ components
+- YAML frontmatter validation and auto-escaping for `{` and `<`
+- Built-in component library including Update, Steps, and CodeGroup
+
+## Breaking Changes
+
+- Removed legacy `<Mermaid>` component; use code blocks only
+
+</Update>
+
+## Upgrade Instructions
+
+<Callout kind="alert">
+Before upgrading, back up your documentation files. Review breaking changes in each release.
+</Callout>
+
+Follow these steps to upgrade Александр Васильевич smoothly.
+
+<Steps>
+  <Step title="Backup" icon="database">
+    Save your current `docs/` directory:
+
+````bash
+cp -r docs docs-backup-$(date +%Y%m%d)
+````
+  </Step>
+  <Step title="Update Package" icon="download">
+    Install the latest version using your package manager:
+
+<CodeGroup tabs="npm,yarn">
+````bash
+npm install alexander-vasilievich@latest
+````
+
+````bash
+yarn add alexander-vasilievich@latest
+````
+</CodeGroup>
+  </Step>
+  <Step title="Migrate Config" icon="settings">
+    Update your configuration file. Add the new `brandColor` option:
+
+````javascript
+// mdx.config.js
+module.exports = {
+  brandColor: '#3B82F6',
+  apiEndpoint: 'https://api.example.com',
+};
+````
+  </Step>
+  <Step title="Test Build" icon="check-circle">
+    Run a test build and verify parsing:
+
+````bash
+npm run build:docs
+````
+  </Step>
+</Steps>
+
+## Upcoming Roadmap
+
+Look ahead to what's next for Александр Васильевич. These teasers highlight planned enhancements.
+
+<Columns cols={3}>
+  <Card title="AI Assistance" icon="zap" href="/introduction#ai">
+    Automated content generation and smart component suggestions.
+  </Card>
+  <Card title="Advanced Analytics" icon="bar-chart" href="/quickstart">
+    Track documentation usage and popular pages.
+  </Card>
+  <Card title="Multi-Language" icon="globe" href="/authentication">
+    Full i18n support for global teams.
+  </Card>
+</Columns>
+
+<Callout kind="tip">
+Subscribe to our updates via webhook at `https://api.example.com/webhooks` to stay informed.
+</Callout>
